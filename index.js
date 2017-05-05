@@ -22,5 +22,6 @@ app.use( async (ctx, next) => {
 
 app.use( ctx => {
     ctx.body = 'node-login';
+    console.log('The server start at prot 3003')
 })
 app.listen(3003);
