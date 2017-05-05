@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/linwalker/node-login#readme",
   "dependencies": {
-    "koa": "^2.2.0"
+    "ejs": "^2.5.6",
+    "koa": "^2.2.0",
+    "koa-views": "^6.0.2"
   }
 }
