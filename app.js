@@ -14,7 +14,10 @@ app.use(views(path.join(__dirname, './view'), {
 
 let index = new Router();
 index.get('/', async (ctx) => {
-    ctx.body = 'index';
+    const title = 'login index';
+    await ctx.render('index', {
+        title
+    })
 })
 
 let main = new Router();
@@ -26,12 +29,7 @@ let router = new Router();
 router.use('/index',index.routes(),index.allowedMethods());
 router.use('/main',main.routes(),main.allowedMethods());
 app.use(router.routes())
-// app.use( async (ctx) => {
-//     const title = 'node-login';
-//     await ctx.render('index',{
-//         title
-//     })
-// })
+
 
 app.listen(3003);
 console.log('The server is on prot 3003')
