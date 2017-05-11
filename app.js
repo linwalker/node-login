@@ -28,7 +28,10 @@ index.get('/', async (ctx) => {
 
 let main = new Router();
 main.get('/', async (ctx) => {
-    ctx.body = 'main';
+    const title = 'main';
+    await ctx.render('main', {
+        title
+    })
 })
 
 let router = new Router();
