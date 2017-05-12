@@ -5,10 +5,14 @@ const Koa = require('koa');
 const views = require('koa-views')
 const path = require('path')
 const Router =require('koa-router');
-const convert = require('koa-convert')
-const koaStatic = require('koa-static')
+const convert = require('koa-convert');
+const koaStatic = require('koa-static');
+const koaLogger = require('koa-logger');
 
 const app = new Koa();
+
+// 配置控制台日志中间件
+app.use(convert(koaLogger()));
 
 // 配置服务端模板渲染引擎中间件
 app.use(views(path.join(__dirname, './view'), {
@@ -16,7 +20,7 @@ app.use(views(path.join(__dirname, './view'), {
 }));
 // 配置静态资源加载中间件
 app.use(convert(koaStatic(
-    path.join(__dirname , './dist')
+    path.join(__dirname , './static')
 )))
 let index = new Router();
 index.get('/', async (ctx) => {

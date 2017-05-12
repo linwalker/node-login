@@ -1,5 +1,5 @@
 /**
- * Created by linyuhua on 2017/5/11.
+ * Created by linyuhua on 2017/5/12.
  */
 import React from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
@@ -25,5 +25,4 @@ class App extends React.Component {
     }
 }
 
-
-export default App
+export default App;

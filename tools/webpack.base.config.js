@@ -5,17 +5,17 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const sourcePath = path.join(__dirname, './pages');
-const outputPath = path.join(__dirname, './../dist');
+const outputPath = path.join(__dirname, './../static');
 
 module.exports = {
 
     entry: {
-        'index' : './pages/index.js',
+        'index' : './pages/index/index.js',
         vendor: ['react', 'react-dom', 'whatwg-fetch'],
     },
     output: {
         path: outputPath,
-        publicPath: './../dist/',
+        publicPath: './../static/',
         filename: 'js/[name].js',
     },
     module: {
@@ -28,8 +28,8 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         query: {
-                            presets: ['es2015', 'react'],
-                            // cacheDirectory: true
+                            // presets: ['es2015', 'react'],
+                            cacheDirectory: true
                         }
                     }
                 ]
