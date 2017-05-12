@@ -2,15 +2,58 @@
  * Created by linyuhua on 2017/5/12.
  */
 import React from 'react'
-import { Layout, Menu, Tabs, Form, Icon, Input, Checkbox, Button } from 'antd'
+import { Layout, Menu, Tabs, Form, Icon, Input, Checkbox, Button, Message } from 'antd'
 
 const { Header, Content, Footer } = Layout
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;
 class App extends React.Component {
+    state = {
+        confirmDirty: false
+    }
+    handleConfirmBlur = (e) => {
+        const value = e.target.value;
+        this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+    }
+    checkPassword = (rule, value, callback) => {
+        const form = this.props.form;
+        if (value && value !== form.getFieldValue('password')) {
+            callback('Two passwords that you enter is inconsistent!');
+        } else {
+            callback();
+        }
+    }
+    checkConfirm = (rule, value, callback) => {
+        const form = this.props.form;
+        if (value && this.state.confirmDirty) {
+            form.validateFields(['confirm'], { force: true });
+        }
+        callback();
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
-
+        const formItemLayout = {
+            labelCol: {
+                xs: { span: 24 },
+                sm: { span: 8 },
+            },
+            wrapperCol: {
+                xs: { span: 24 },
+                sm: { span: 14 },
+            },
+        };
+        const tailFormItemLayout = {
+            wrapperCol: {
+                xs: {
+                    span: 24,
+                    offset: 0,
+                },
+                sm: {
+                    span: 14,
+                    offset: 6,
+                },
+            },
+        };
         return (
             <Layout className="layout">
                 <Header>
@@ -28,10 +71,10 @@ class App extends React.Component {
                 </Header>
                 <Content style={{ padding: '0 50px' }}>
                     <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-                        <Tabs defaultActiveKey="1" size="small">
+                        <Tabs defaultActiveKey="2" size="small">
                             <TabPane tab="登录" key="1">
                                 <div style={{ width: "280px", margin: "0 auto" }}>
-                                    <Form  className="login-form">
+                                    <Form>
                                         <FormItem>
                                             {getFieldDecorator('userName', {
                                                 rules: [{ required: true, message: '请您输入账号名称！' }],
@@ -41,7 +84,8 @@ class App extends React.Component {
                                         </FormItem>
                                         <FormItem>
                                             {getFieldDecorator('password', {
-                                                rules: [{ required: true, message: '请您输入账号密码！' }],
+                                                rules: [
+                                                    { required: true, message: '请您输入账号密码！' }],
                                             })(
                                                 <Input addonBefore={<Icon type="lock" />} type="password" placeholder="请您输入账号密码" />
                                             )}
@@ -51,12 +95,87 @@ class App extends React.Component {
                                                 valuePropName: 'checked',
                                                 initialValue: true,
                                             })(
-                                                <Checkbox>记住登录</Checkbox>
+                                                <Checkbox>Remember me</Checkbox>
                                             )}
-                                            <a className="login-form-forgot">忘记密码</a><br/>
-                                            <Button type="primary" htmlType="submit" className="login-form-button">
-                                                确定
+                                            <a  href="" style={{float: 'right'}}>Forgot password</a>
+                                            <Button type="primary" htmlType="submit" style={{width: '100%'}} >
+                                                Log in
                                             </Button>
+                                            Or <a href="">register now!</a>
+                                        </FormItem>
+                                    </Form>
+                                </div>
+                            </TabPane>
+                            <TabPane tab="注册" key="2">
+                                <div style={{ width: "450px", margin: "0 auto" }}>
+                                    <Form>
+                                        <FormItem
+                                            {...formItemLayout}
+                                            label="username"
+                                            hasFeedback
+                                        >
+                                            {getFieldDecorator('username', {
+                                                rules: [{ required: true, message: 'Please input your username!', whitespace: true }],
+                                            })(
+                                                <Input />
+                                            )}
+                                        </FormItem>
+                                        <FormItem
+                                            {...formItemLayout}
+                                            label="Password"
+                                            hasFeedback
+                                        >
+                                            {getFieldDecorator('password', {
+                                                rules: [
+                                                    { required: true, message: 'Please input your password!', whitespace: true },
+                                                    {
+                                                        validator: this.checkConfirm,
+                                                    }
+                                                ],
+                                            })(
+                                                <Input type="password"/>
+                                            )}
+                                        </FormItem>
+                                        <FormItem
+                                            {...formItemLayout}
+                                            label="Confirm Password"
+                                            hasFeedback
+                                        >
+                                            {getFieldDecorator('confirm', {
+                                                rules: [
+                                                    { required: true, message: 'Please Confirm Password!', whitespace: true },
+                                                    {
+                                                        validator: this.checkPassword
+                                                    }
+                                                ],
+                                            })(
+                                                <Input type="password" onBlur={this.handleConfirmBlur}/>
+                                            )}
+                                        </FormItem>
+                                        <FormItem
+                                            {...formItemLayout}
+                                            label="E-mail"
+                                            hasFeedback
+                                        >
+                                            {getFieldDecorator('email', {
+                                                rules: [{
+                                                    type: 'email', message: 'The input is not valid E-mail!',
+                                                }, {
+                                                    required: true, message: 'Please input your E-mail!',
+                                                }],
+                                            })(
+                                                <Input />
+                                            )}
+                                        </FormItem>
+                                        <FormItem {...tailFormItemLayout} style={{ marginBottom: 8 }}>
+                                            {getFieldDecorator('agreement', {
+                                                valuePropName: 'checked',
+                                            })(
+                                                <Checkbox>I have read the <a href="">agreement</a></Checkbox>
+                                            )}
+                                        </FormItem>
+                                        <FormItem {...tailFormItemLayout}>
+                                            <Button type="primary" htmlType="submit" size="large">Register</Button>
                                         </FormItem>
                                     </Form>
                                 </div>
