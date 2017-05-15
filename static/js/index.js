@@ -974,61 +974,36 @@ module.exports = function omit(obj, fields) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button_style_css__ = __webpack_require__(437);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_lib_button_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_button__ = __webpack_require__(436);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd_lib_button__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox_style_css__ = __webpack_require__(429);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_checkbox__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_checkbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_antd_lib_checkbox__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css__ = __webpack_require__(376);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_input__ = __webpack_require__(375);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_icon_style_css__ = __webpack_require__(371);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_icon_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_antd_lib_icon_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_antd_lib_icon__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_antd_lib_icon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_antd_lib_icon__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_antd_lib_menu_style_css__ = __webpack_require__(312);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_antd_lib_menu_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_antd_lib_menu_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_antd_lib_menu__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_classCallCheck__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_babel_runtime_helpers_createClass__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_babel_runtime_helpers_inherits__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_antd_lib_form_style_css__ = __webpack_require__(367);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_antd_lib_form_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_antd_lib_form_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_antd_lib_form__ = __webpack_require__(366);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_antd_lib_form___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_antd_lib_form__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_antd_lib_tabs_style_css__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_antd_lib_tabs_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_antd_lib_tabs_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_antd_lib_tabs__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_antd_lib_tabs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_antd_lib_tabs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_antd_lib_layout_style_css__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_antd_lib_layout_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_antd_lib_layout_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_antd_lib_layout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_react__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_react__);
-
-
-
-
-
-
-
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_menu_style_css__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_menu_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_antd_lib_menu_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_lib_menu__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_form_style_css__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_form_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_antd_lib_form_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_antd_lib_form__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_antd_lib_form___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_antd_lib_form__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_antd_lib_tabs_style_css__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_antd_lib_tabs_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_antd_lib_tabs_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_antd_lib_tabs__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_antd_lib_tabs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_antd_lib_tabs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_antd_lib_layout_style_css__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_antd_lib_layout_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_antd_lib_layout_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_antd_lib_layout__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_LoginTab__ = __webpack_require__(441);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_RegisterTab__ = __webpack_require__(442);
 
 
 
@@ -1046,28 +1021,31 @@ module.exports = function omit(obj, fields) {
  * Created by linyuhua on 2017/5/12.
  */
 
-var Header = __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout___default.a.Header,
-    Content = __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout___default.a.Content,
-    Footer = __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout___default.a.Footer;
 
-var TabPane = __WEBPACK_IMPORTED_MODULE_19_antd_lib_tabs___default.a.TabPane;
-var FormItem = __WEBPACK_IMPORTED_MODULE_17_antd_lib_form___default.a.Item;
+
+
+var Header = __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout___default.a.Header,
+    Content = __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout___default.a.Content,
+    Footer = __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout___default.a.Footer;
+
+var TabPane = __WEBPACK_IMPORTED_MODULE_10_antd_lib_tabs___default.a.TabPane;
+var FormItem = __WEBPACK_IMPORTED_MODULE_8_antd_lib_form___default.a.Item;
 
 var App = function (_React$Component) {
-    __WEBPACK_IMPORTED_MODULE_15_babel_runtime_helpers_inherits___default()(App, _React$Component);
+    __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(App, _React$Component);
 
     function App() {
         var _ref;
 
         var _temp, _this, _ret;
 
-        __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_classCallCheck___default()(this, App);
+        __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, App);
 
         for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = __WEBPACK_IMPORTED_MODULE_14_babel_runtime_helpers_possibleConstructorReturn___default()(this, (_ref = App.__proto__ || __WEBPACK_IMPORTED_MODULE_11_babel_runtime_core_js_object_get_prototype_of___default()(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        return _ret = (_temp = (_this = __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default()(this, (_ref = App.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             confirmDirty: false
         }, _this.handleConfirmBlur = function (e) {
             var value = e.target.value;
@@ -1085,10 +1063,10 @@ var App = function (_React$Component) {
                 form.validateFields(['confirm'], { force: true });
             }
             callback();
-        }, _temp), __WEBPACK_IMPORTED_MODULE_14_babel_runtime_helpers_possibleConstructorReturn___default()(_this, _ret);
+        }, _temp), __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default()(_this, _ret);
     }
 
-    __WEBPACK_IMPORTED_MODULE_13_babel_runtime_helpers_createClass___default()(App, [{
+    __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(App, [{
         key: 'render',
         value: function render() {
             var getFieldDecorator = this.props.form.getFieldDecorator;
@@ -1111,194 +1089,65 @@ var App = function (_React$Component) {
                     },
                     sm: {
                         span: 14,
-                        offset: 6
+                        offset: 8
                     }
                 }
             };
-            return __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_21_antd_lib_layout___default.a,
+            return __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_12_antd_lib_layout___default.a,
                 { className: 'layout' },
-                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                     Header,
                     null,
-                    __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement('div', { className: 'logo' }),
-                    __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu___default.a,
+                    __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement('div', { className: 'logo' }),
+                    __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default.a,
                         {
                             theme: 'dark',
                             mode: 'horizontal',
                             defaultSelectedKeys: ['1'],
                             style: { lineHeight: '64px' }
                         },
-                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu___default.a.Item,
+                        __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default.a.Item,
                             { key: '1' },
                             'login'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu___default.a.Item,
+                        __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default.a.Item,
                             { key: '2' },
                             'article'
                         ),
-                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_10_antd_lib_menu___default.a.Item,
+                        __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default.a.Item,
                             { key: '3' },
                             'editor'
                         )
                     )
                 ),
-                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                     Content,
                     { style: { padding: '0 50px' } },
-                    __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                         'div',
                         { style: { background: '#fff', padding: 24, minHeight: 280 } },
-                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_19_antd_lib_tabs___default.a,
+                        __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_10_antd_lib_tabs___default.a,
                             { defaultActiveKey: '2', size: 'small' },
-                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                                 TabPane,
                                 { tab: '\u767B\u5F55', key: '1' },
-                                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                    'div',
-                                    { style: { width: "280px", margin: "0 auto" } },
-                                    __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                        __WEBPACK_IMPORTED_MODULE_17_antd_lib_form___default.a,
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            null,
-                                            getFieldDecorator('userName', {
-                                                rules: [{ required: true, message: '请您输入账号名称！' }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { addonBefore: __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_antd_lib_icon___default.a, { type: 'user' }), placeholder: '\u8BF7\u60A8\u8F93\u5165\u7528\u6237\u540D\u79F0\uFF01' }))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            null,
-                                            getFieldDecorator('password', {
-                                                rules: [{ required: true, message: '请您输入账号密码！' }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { addonBefore: __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_antd_lib_icon___default.a, { type: 'lock' }), type: 'password', placeholder: '\u8BF7\u60A8\u8F93\u5165\u8D26\u53F7\u5BC6\u7801' }))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            null,
-                                            getFieldDecorator('remember', {
-                                                valuePropName: 'checked',
-                                                initialValue: true
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                __WEBPACK_IMPORTED_MODULE_4_antd_lib_checkbox___default.a,
-                                                null,
-                                                'Remember me'
-                                            )),
-                                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                'a',
-                                                { href: '', style: { float: 'right' } },
-                                                'Forgot password'
-                                            ),
-                                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                __WEBPACK_IMPORTED_MODULE_2_antd_lib_button___default.a,
-                                                { type: 'primary', htmlType: 'submit', style: { width: '100%' } },
-                                                'Log in'
-                                            ),
-                                            'Or ',
-                                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                'a',
-                                                { href: '' },
-                                                'register now!'
-                                            )
-                                        )
-                                    )
-                                )
+                                __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_14__components_LoginTab__["a" /* default */], null)
                             ),
-                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                                 TabPane,
                                 { tab: '\u6CE8\u518C', key: '2' },
-                                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                    'div',
-                                    { style: { width: "450px", margin: "0 auto" } },
-                                    __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                        __WEBPACK_IMPORTED_MODULE_17_antd_lib_form___default.a,
-                                        null,
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, formItemLayout, {
-                                                label: 'username',
-                                                hasFeedback: true
-                                            }),
-                                            getFieldDecorator('username', {
-                                                rules: [{ required: true, message: 'Please input your username!', whitespace: true }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, null))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, formItemLayout, {
-                                                label: 'Password',
-                                                hasFeedback: true
-                                            }),
-                                            getFieldDecorator('password', {
-                                                rules: [{ required: true, message: 'Please input your password!', whitespace: true }, {
-                                                    validator: this.checkConfirm
-                                                }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { type: 'password' }))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, formItemLayout, {
-                                                label: 'Confirm Password',
-                                                hasFeedback: true
-                                            }),
-                                            getFieldDecorator('confirm', {
-                                                rules: [{ required: true, message: 'Please Confirm Password!', whitespace: true }, {
-                                                    validator: this.checkPassword
-                                                }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { type: 'password', onBlur: this.handleConfirmBlur }))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, formItemLayout, {
-                                                label: 'E-mail',
-                                                hasFeedback: true
-                                            }),
-                                            getFieldDecorator('email', {
-                                                rules: [{
-                                                    type: 'email', message: 'The input is not valid E-mail!'
-                                                }, {
-                                                    required: true, message: 'Please input your E-mail!'
-                                                }]
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, null))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, tailFormItemLayout, { style: { marginBottom: 8 } }),
-                                            getFieldDecorator('agreement', {
-                                                valuePropName: 'checked'
-                                            })(__WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                __WEBPACK_IMPORTED_MODULE_4_antd_lib_checkbox___default.a,
-                                                null,
-                                                'I have read the ',
-                                                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                    'a',
-                                                    { href: '' },
-                                                    'agreement'
-                                                )
-                                            ))
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                            FormItem,
-                                            tailFormItemLayout,
-                                            __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
-                                                __WEBPACK_IMPORTED_MODULE_2_antd_lib_button___default.a,
-                                                { type: 'primary', htmlType: 'submit', size: 'large' },
-                                                'Register'
-                                            )
-                                        )
-                                    )
-                                )
+                                __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_15__components_RegisterTab__["a" /* default */], null)
                             )
                         )
                     )
                 ),
-                __WEBPACK_IMPORTED_MODULE_22_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                     Footer,
                     { style: { textAlign: 'center' } },
                     'Node-Login \xA92017 Created by linwalker'
@@ -1308,9 +1157,9 @@ var App = function (_React$Component) {
     }]);
 
     return App;
-}(__WEBPACK_IMPORTED_MODULE_22_react___default.a.Component);
+}(__WEBPACK_IMPORTED_MODULE_13_react___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_17_antd_lib_form___default.a.create()(App));
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_8_antd_lib_form___default.a.create()(App));
 
 /***/ }),
 /* 137 */,
@@ -19077,6 +18926,366 @@ __webpack_require__(438);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 439 */,
+/* 440 */,
+/* 441 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_lib_button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css__ = __webpack_require__(429);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_input_style_css__ = __webpack_require__(376);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_antd_lib_input_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_antd_lib_input_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input__ = __webpack_require__(375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_antd_lib_input__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_icon_style_css__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_icon_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_antd_lib_icon_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_icon__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_antd_lib_icon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_antd_lib_icon__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_createClass__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_inherits__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_antd_lib_form_style_css__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_antd_lib_form_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_antd_lib_form_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_antd_lib_form__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_antd_lib_form___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_antd_lib_form__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout_style_css__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_antd_lib_layout_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_antd_lib_layout__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_antd_lib_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_antd_lib_layout__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_react__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Created by linyuhua on 2017/5/15.
+ */
+
+var Header = __WEBPACK_IMPORTED_MODULE_16_antd_lib_layout___default.a.Header,
+    Content = __WEBPACK_IMPORTED_MODULE_16_antd_lib_layout___default.a.Content,
+    Footer = __WEBPACK_IMPORTED_MODULE_16_antd_lib_layout___default.a.Footer;
+
+var FormItem = __WEBPACK_IMPORTED_MODULE_14_antd_lib_form___default.a.Item;
+
+var LoginTab = function (_React$Component) {
+    __WEBPACK_IMPORTED_MODULE_12_babel_runtime_helpers_inherits___default()(LoginTab, _React$Component);
+
+    function LoginTab() {
+        __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck___default()(this, LoginTab);
+
+        return __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_possibleConstructorReturn___default()(this, (LoginTab.__proto__ || __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_get_prototype_of___default()(LoginTab)).apply(this, arguments));
+    }
+
+    __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_createClass___default()(LoginTab, [{
+        key: 'render',
+        value: function render() {
+            var getFieldDecorator = this.props.form.getFieldDecorator;
+
+
+            return __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                'div',
+                { style: { width: "280px", margin: "0 auto" } },
+                __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_14_antd_lib_form___default.a,
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                        FormItem,
+                        null,
+                        getFieldDecorator('userName', {
+                            rules: [{ required: true, message: '请您输入账号名称！' }]
+                        })(__WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd_lib_input___default.a, { addonBefore: __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_antd_lib_icon___default.a, { type: 'user' }), placeholder: '\u8BF7\u60A8\u8F93\u5165\u7528\u6237\u540D\u79F0\uFF01' }))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                        FormItem,
+                        null,
+                        getFieldDecorator('password', {
+                            rules: [{ required: true, message: '请您输入账号密码！' }]
+                        })(__WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_antd_lib_input___default.a, { addonBefore: __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_antd_lib_icon___default.a, { type: 'lock' }), type: 'password', placeholder: '\u8BF7\u60A8\u8F93\u5165\u8D26\u53F7\u5BC6\u7801' }))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                        FormItem,
+                        null,
+                        getFieldDecorator('remember', {
+                            valuePropName: 'checked',
+                            initialValue: true
+                        })(__WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox___default.a,
+                            null,
+                            'Remember me'
+                        )),
+                        __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                            'a',
+                            { href: '', style: { float: 'right' } },
+                            'Forgot password'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_antd_lib_button___default.a,
+                            { type: 'primary', htmlType: 'submit', style: { width: '100%' } },
+                            'Log in'
+                        ),
+                        'Or ',
+                        __WEBPACK_IMPORTED_MODULE_17_react___default.a.createElement(
+                            'a',
+                            { href: '' },
+                            'register now!'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return LoginTab;
+}(__WEBPACK_IMPORTED_MODULE_17_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_14_antd_lib_form___default.a.create()(LoginTab));
+
+/***/ }),
+/* 442 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_antd_lib_button_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_antd_lib_button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_antd_lib_button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css__ = __webpack_require__(429);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_antd_lib_checkbox_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css__ = __webpack_require__(376);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_antd_lib_input_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_input__ = __webpack_require__(375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_classCallCheck__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_createClass__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_inherits__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_antd_lib_form_style_css__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_antd_lib_form_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_antd_lib_form_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_antd_lib_form__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_antd_lib_form___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_antd_lib_form__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_antd_lib_layout_style_css__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_antd_lib_layout_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_antd_lib_layout_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_antd_lib_layout__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_react__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_react__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Created by linyuhua on 2017/5/15.
+ */
+
+var Header = __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout___default.a.Header,
+    Content = __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout___default.a.Content,
+    Footer = __WEBPACK_IMPORTED_MODULE_15_antd_lib_layout___default.a.Footer;
+
+var FormItem = __WEBPACK_IMPORTED_MODULE_13_antd_lib_form___default.a.Item;
+
+var RegisterTab = function (_React$Component) {
+    __WEBPACK_IMPORTED_MODULE_11_babel_runtime_helpers_inherits___default()(RegisterTab, _React$Component);
+
+    function RegisterTab() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_classCallCheck___default()(this, RegisterTab);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_possibleConstructorReturn___default()(this, (_ref = RegisterTab.__proto__ || __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_prototype_of___default()(RegisterTab)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            confirmDirty: false
+        }, _this.handleConfirmBlur = function (e) {
+            var value = e.target.value;
+            _this.setState({ confirmDirty: _this.state.confirmDirty || !!value });
+        }, _this.checkPassword = function (rule, value, callback) {
+            var form = _this.props.form;
+            if (value && value !== form.getFieldValue('password')) {
+                callback('Two passwords that you enter is inconsistent!');
+            } else {
+                callback();
+            }
+        }, _this.checkConfirm = function (rule, value, callback) {
+            var form = _this.props.form;
+            if (value && _this.state.confirmDirty) {
+                form.validateFields(['confirm'], { force: true });
+            }
+            callback();
+        }, _temp), __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_possibleConstructorReturn___default()(_this, _ret);
+    }
+
+    __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_createClass___default()(RegisterTab, [{
+        key: 'render',
+        value: function render() {
+            var getFieldDecorator = this.props.form.getFieldDecorator;
+
+            var formItemLayout = {
+                labelCol: {
+                    xs: { span: 24 },
+                    sm: { span: 8 }
+                },
+                wrapperCol: {
+                    xs: { span: 24 },
+                    sm: { span: 14 }
+                }
+            };
+            var tailFormItemLayout = {
+                wrapperCol: {
+                    xs: {
+                        span: 24,
+                        offset: 0
+                    },
+                    sm: {
+                        span: 14,
+                        offset: 8
+                    }
+                }
+            };
+
+            return __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                'div',
+                { style: { width: "450px", margin: "0 auto" } },
+                __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_13_antd_lib_form___default.a,
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default()({}, formItemLayout, {
+                            label: 'username',
+                            hasFeedback: true
+                        }),
+                        getFieldDecorator('username', {
+                            rules: [{ required: true, message: 'Please input your username!', whitespace: true }]
+                        })(__WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, null))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default()({}, formItemLayout, {
+                            label: 'Password',
+                            hasFeedback: true
+                        }),
+                        getFieldDecorator('password', {
+                            rules: [{ required: true, message: 'Please input your password!', whitespace: true }, {
+                                validator: this.checkConfirm
+                            }]
+                        })(__WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { type: 'password' }))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default()({}, formItemLayout, {
+                            label: 'Confirm Password',
+                            hasFeedback: true
+                        }),
+                        getFieldDecorator('confirm', {
+                            rules: [{ required: true, message: 'Please Confirm Password!', whitespace: true }, {
+                                validator: this.checkPassword
+                            }]
+                        })(__WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, { type: 'password', onBlur: this.handleConfirmBlur }))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default()({}, formItemLayout, {
+                            label: 'E-mail',
+                            hasFeedback: true
+                        }),
+                        getFieldDecorator('email', {
+                            rules: [{
+                                type: 'email', message: 'The input is not valid E-mail!'
+                            }, {
+                                required: true, message: 'Please input your E-mail!'
+                            }]
+                        })(__WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_antd_lib_input___default.a, null))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_extends___default()({}, tailFormItemLayout, { style: { marginBottom: 8 } }),
+                        getFieldDecorator('agreement', {
+                            valuePropName: 'checked'
+                        })(__WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_3_antd_lib_checkbox___default.a,
+                            null,
+                            'I have read the ',
+                            __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                                'a',
+                                { href: '' },
+                                'agreement'
+                            )
+                        ))
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                        FormItem,
+                        tailFormItemLayout,
+                        __WEBPACK_IMPORTED_MODULE_16_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_antd_lib_button___default.a,
+                            { type: 'primary', htmlType: 'submit', size: 'large' },
+                            'Register'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return RegisterTab;
+}(__WEBPACK_IMPORTED_MODULE_16_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_13_antd_lib_form___default.a.create()(RegisterTab));
 
 /***/ })
 ],[146]);

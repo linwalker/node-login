@@ -8,6 +8,8 @@ const Router =require('koa-router');
 const convert = require('koa-convert');
 const koaStatic = require('koa-static');
 const koaLogger = require('koa-logger');
+const mongoose = require('mongoose');
+const config = require('./config');
 
 const app = new Koa();
 
@@ -18,17 +20,40 @@ app.use(convert(koaLogger()));
 app.use(views(path.join(__dirname, './view'), {
     extension: 'ejs'
 }));
+
 // 配置静态资源加载中间件
 app.use(convert(koaStatic(
     path.join(__dirname , './static')
 )))
+
+mongoose.connect(config.database);
+
 let index = new Router();
+
 index.get('/', async (ctx) => {
     const title = 'login index';
     await ctx.render('index', {
         title
     })
 })
+
+index.post('/signup', (req, res) => {
+    if (!req.body.name || !req.body.password) {
+        res.json({success: false, message: '请输入你的账号密码。'});
+    } else {
+        const newUser = new User({
+            name: req.body.name,
+            password: req.body.password
+        });
+
+        newUser.save((err) => {
+            if (err) {
+                return res.json({success: false, message: '注册失败！'});
+            }
+            res.json({success: true, message: '成功创建新用户！'});
+        });
+    }
+});
 
 let main = new Router();
 main.get('/', async (ctx) => {
@@ -42,7 +67,6 @@ let router = new Router();
 router.use('/index',index.routes(),index.allowedMethods());
 router.use('/main',main.routes(),main.allowedMethods());
 app.use(router.routes())
-
 
 app.listen(3003);
 console.log('The server is on prot 3003')
