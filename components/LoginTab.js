@@ -7,12 +7,42 @@ const { Header, Content, Footer } = Layout
 const FormItem = Form.Item;
 
 class LoginTab extends React.Component {
+    // async handleSubmit(e) {
+    //     e.preventDefault();
+    //
+    //     let values = await this.getFormValues();
+    //     // let values = this.props.form.validateFields();
+    //     if (values) {
+    //         console.log(values);
+    //     }
+    // }
+    handleSubmit = async(e) => {
+        e.preventDefault();
+
+        let values = await this.getFormValues();
+        // let values = this.props.form.validateFields();
+        if (values) {
+            console.log(values);
+        }
+    }
+    getFormValues() {
+        let self = this;
+        return new Promise((resolve, reject) => {
+            self.props.form.validateFields((err, values) => {
+                if (!err) {
+                    resolve( values );
+                } else {
+                    reject( false );
+                }
+            })
+        })
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
 
         return (
             <div style={{ width: "280px", margin: "0 auto" }}>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                     <FormItem>
                         {getFieldDecorator('userName', {
                             rules: [{ required: true, message: '请您输入账号名称！' }],
