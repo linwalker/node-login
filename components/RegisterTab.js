@@ -4,6 +4,7 @@
 import React from 'react'
 import { Layout, Form, Icon, Input, Checkbox, Button, Message } from 'antd'
 const { Header, Content, Footer } = Layout
+import 'whatwg-fetch'
 const FormItem = Form.Item;
 
 class RegisterTab extends React.Component {
@@ -29,7 +30,37 @@ class RegisterTab extends React.Component {
         }
         callback();
     }
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        let values = await this.getFormValues();
+        if (values) {
+            console.log(values);
+            fetch('/index/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(values)
+            }).then(res => {
+                res.json().then(res => {
+                    console.log(res.success)
+                })
+            })
 
+        }
+    }
+    getFormValues() {
+        let self = this;
+        return new Promise((resolve, reject) => {
+            self.props.form.validateFields((err, values) => {
+                if (!err) {
+                    resolve( values );
+                } else {
+                    reject( false );
+                }
+            })
+        })
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
         const formItemLayout = {
@@ -57,7 +88,7 @@ class RegisterTab extends React.Component {
 
         return(
             <div style={{ width: "450px", margin: "0 auto" }}>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                     <FormItem
                         {...formItemLayout}
                         label="username"

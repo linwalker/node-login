@@ -3,19 +3,10 @@
  */
 import React from 'react'
 import { Layout, Form, Icon, Input, Checkbox, Button, Message } from 'antd'
-const { Header, Content, Footer } = Layout
+import 'whatwg-fetch';
 const FormItem = Form.Item;
 
 class LoginTab extends React.Component {
-    // async handleSubmit(e) {
-    //     e.preventDefault();
-    //
-    //     let values = await this.getFormValues();
-    //     // let values = this.props.form.validateFields();
-    //     if (values) {
-    //         console.log(values);
-    //     }
-    // }
     handleSubmit = async(e) => {
         e.preventDefault();
 
@@ -23,6 +14,7 @@ class LoginTab extends React.Component {
         // let values = this.props.form.validateFields();
         if (values) {
             console.log(values);
+
         }
     }
     getFormValues() {

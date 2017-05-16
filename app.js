@@ -8,6 +8,7 @@ const Router =require('koa-router');
 const convert = require('koa-convert');
 const koaStatic = require('koa-static');
 const koaLogger = require('koa-logger');
+const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 const config = require('./config');
 
@@ -15,6 +16,9 @@ const app = new Koa();
 
 // 配置控制台日志中间件
 app.use(convert(koaLogger()));
+
+// 使用ctx.body解析中间件
+app.use(bodyParser());
 
 // 配置服务端模板渲染引擎中间件
 app.use(views(path.join(__dirname, './view'), {
@@ -37,20 +41,21 @@ index.get('/', async (ctx) => {
     })
 })
 
-index.post('/signup', (req, res) => {
-    if (!req.body.name || !req.body.password) {
-        res.json({success: false, message: '请输入你的账号密码。'});
+index.post('/signup', async (ctx) => {
+    if (!ctx.request.body.username && !ctx.request.body.password) {
+        ctx.body = {success: false, message: '请输入用户名和密码！'};
+        console.log(ctx.body)
     } else {
         const newUser = new User({
-            name: req.body.name,
-            password: req.body.password
+            name: ctx.request.body.username,
+            password: ctx.request.body.password
         });
 
         newUser.save((err) => {
             if (err) {
-                return res.json({success: false, message: '注册失败！'});
+                return ctx.body = {success: false, message: '注册失败！'};
             }
-            res.json({success: true, message: '成功创建新用户！'});
+            ctx.body = {success: true, message: '成功创建新用户！'};
         });
     }
 });

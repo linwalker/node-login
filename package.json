@@ -37,7 +37,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "validator": "^6.2.0",
-    "whatwg-fetch": "^2.0.1"
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
