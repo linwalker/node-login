@@ -11,6 +11,7 @@ const koaLogger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 const config = require('./config');
+const User = require('./models/user');
 
 const app = new Koa();
 
@@ -30,6 +31,7 @@ app.use(convert(koaStatic(
     path.join(__dirname , './static')
 )))
 
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 let index = new Router();
@@ -46,17 +48,20 @@ index.post('/signup', async (ctx) => {
         ctx.body = {success: false, message: '请输入用户名和密码！'};
         console.log(ctx.body)
     } else {
-        const newUser = new User({
-            name: ctx.request.body.username,
-            password: ctx.request.body.password
+        var newUser = new User({
+            username: ctx.request.body.username,
+            password: ctx.request.body.password,
         });
 
-        newUser.save((err) => {
-            if (err) {
-                return ctx.body = {success: false, message: '注册失败！'};
+         newUser.save((err) => {
+            if(err) {
+                ctx.body = {success: false, message: '注册失败'}
+            } else {
+                ctx.body = {succese: true, message: '成功创建新用户'}
             }
-            ctx.body = {success: true, message: '成功创建新用户！'};
         });
+        // await newUser.save();
+        // ctx.body = {success: true, message: '成功创建新用户！'};
     }
 });
 
