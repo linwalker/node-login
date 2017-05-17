@@ -11,10 +11,9 @@ class LoginTab extends React.Component {
         e.preventDefault();
 
         let values = await this.getFormValues();
-        // let values = this.props.form.validateFields();
         if (values) {
             console.log(values);
-            fetch('/index/signin', {
+            fetch('/home/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'

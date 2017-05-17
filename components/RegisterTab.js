@@ -35,7 +35,7 @@ class RegisterTab extends React.Component {
         let values = await this.getFormValues();
         if (values) {
             console.log(values);
-            fetch('/index/signup', {
+            fetch('/home/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'

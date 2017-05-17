@@ -8161,7 +8161,7 @@ var App = function (_React$Component) {
                         },
                         __WEBPACK_IMPORTED_MODULE_9_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_1_antd_lib_menu___default.a.Item,
-                            { key: '/index' },
+                            { key: '/home' },
                             'login'
                         ),
                         __WEBPACK_IMPORTED_MODULE_9_react___default.a.createElement(

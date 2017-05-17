@@ -10730,7 +10730,7 @@ var App = function (_React$Component) {
                         },
                         __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: '/index' },
+                            { key: '/home' },
                             'login'
                         ),
                         __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
@@ -13900,10 +13900,9 @@ var LoginTab = function (_React$Component) {
                             case 3:
                                 values = _context.sent;
 
-                                // let values = this.props.form.validateFields();
                                 if (values) {
                                     console.log(values);
-                                    fetch('/index/signin', {
+                                    fetch('/home/signin', {
                                         method: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json; charset=utf-8'
@@ -14135,7 +14134,7 @@ var RegisterTab = function (_React$Component) {
 
                                 if (values) {
                                     console.log(values);
-                                    fetch('/index/signup', {
+                                    fetch('/home/signup', {
                                         method: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json; charset=utf-8'
@@ -21266,4 +21265,4 @@ if (hadRuntime) {
 
 /***/ })
 ],[304]);
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=home.js.map

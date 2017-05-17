@@ -10,8 +10,8 @@ const outputPath = path.join(__dirname, './../static');
 module.exports = {
 
     entry: {
-        'index' : './pages/index/index.js',
         'main' : './pages/main/index.js',
+        'home' : './pages/home/index.js',
         vendor: ['react', 'react-dom', 'whatwg-fetch'],
     },
     output: {

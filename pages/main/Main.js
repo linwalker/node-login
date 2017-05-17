@@ -21,7 +21,7 @@ class App extends React.Component {
                         onClick={this.handleClick}
                         style={{ lineHeight: '64px' }}
                     >
-                        <Menu.Item key="/index">login</Menu.Item>
+                        <Menu.Item key="/home">login</Menu.Item>
                         <Menu.Item key="/main">article</Menu.Item>
                         <Menu.Item key="/editor">editor</Menu.Item>
                     </Menu>

@@ -40,7 +40,7 @@ module.exports = {
                 //     }
                 // })
             } else {
-                ctx.body = { success: false, message: 'username already registered'};
+                ctx.body = { success: false, message: '用户名已存在'};
             }
         }
     },

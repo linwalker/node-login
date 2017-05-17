@@ -11,7 +11,7 @@ const koaLogger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 const config = require('./config');
-const userInfoController = require('./controller/user-info');
+const routers = require('./routes/index');
 const app = new Koa();
 
 // 配置控制台日志中间件
@@ -33,36 +33,8 @@ app.use(convert(koaStatic(
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
-let index = new Router();
-
-index.get('/', async (ctx) => {
-    const title = 'login index';
-    await ctx.render('index', {
-        title
-    })
-})
-
-index.post('/signup', userInfoController.signUp);
-index.post('/signin', userInfoController.signIn);
-
-let main = new Router();
-main.get('/', async (ctx) => {
-    const title = 'main';
-    await ctx.render('main', {
-        title
-    })
-})
-
-let editor = new Router();
-editor.get('/', async (ctx) => {
-    ctx.body = '暂未增加'
-})
-
-let router = new Router();
-router.use('/index',index.routes(),index.allowedMethods());
-router.use('/main',main.routes(),main.allowedMethods());
-router.use('/editor',editor.routes(),editor.allowedMethods());
-app.use(router.routes())
+// 初始化路由中间件
+app.use(routers.routes()).use(routers.allowedMethods())
 
 app.listen(3003);
 console.log('The server is on prot 3003')
