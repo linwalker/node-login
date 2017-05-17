@@ -11,8 +11,7 @@ const koaLogger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 const config = require('./config');
-const User = require('./models/user');
-
+const userInfoController = require('./controller/user-info');
 const app = new Koa();
 
 // 配置控制台日志中间件
@@ -43,27 +42,7 @@ index.get('/', async (ctx) => {
     })
 })
 
-index.post('/signup', async (ctx) => {
-    if (!ctx.request.body.username && !ctx.request.body.password) {
-        ctx.body = {success: false, message: '请输入用户名和密码！'};
-        console.log(ctx.body)
-    } else {
-        var newUser = new User({
-            username: ctx.request.body.username,
-            password: ctx.request.body.password,
-        });
-
-         newUser.save((err) => {
-            if(err) {
-                ctx.body = {success: false, message: '注册失败'}
-            } else {
-                ctx.body = {succese: true, message: '成功创建新用户'}
-            }
-        });
-        // await newUser.save();
-        // ctx.body = {success: true, message: '成功创建新用户！'};
-    }
-});
+index.post('/signup', userInfoController.signUp);
 
 let main = new Router();
 main.get('/', async (ctx) => {
