@@ -19,14 +19,14 @@ module.exports = {
             let user = await User.findOne({username});
             //检查用户名是否已存在
             if(!user) {
-                var newUser = new User({
+                const newUser = new User({
                     username: username,
                     password: password,
                     email: email,
                 });
 
                 const doc = await newUser.save();
-                if ( !doc.errors) {
+                if (!doc.errors) {
                     ctx.body = {success: true, message: '注册成功'}
                 } else {
                     ctx.body = result;

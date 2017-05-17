@@ -22,7 +22,7 @@ class LoginTab extends React.Component {
                 body: JSON.stringify(values)
             }).then(res => {
                 res.json().then(res => {
-                    console.log(res.success)
+                    Message.info(res.message);
                 })
             })
         }
@@ -67,7 +67,6 @@ class LoginTab extends React.Component {
                         })(
                             <Checkbox>Remember me</Checkbox>
                         )}
-                        <a  href="" style={{float: 'right'}}>Forgot password</a>
                         <Button type="primary" htmlType="submit" style={{width: '100%'}} >
                             Log in
                         </Button>

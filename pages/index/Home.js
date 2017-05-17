@@ -8,6 +8,10 @@ import RegisterTab from '../../components/RegisterTab';
 const { Header, Content, Footer } = Layout
 const TabPane = Tabs.TabPane;
 class App extends React.Component {
+    handleClick = (item) => {
+        const path = item.key;
+        location.href = path;
+    }
     render() {
         return (
             <Layout className="layout">
@@ -17,16 +21,17 @@ class App extends React.Component {
                         theme="dark"
                         mode="horizontal"
                         defaultSelectedKeys={['1']}
+                        onClick={this.handleClick}
                         style={{ lineHeight: '64px' }}
                     >
-                        <Menu.Item key="1">login</Menu.Item>
-                        <Menu.Item key="2">article</Menu.Item>
+                        <Menu.Item key="/index">login</Menu.Item>
+                        <Menu.Item key="/main">article</Menu.Item>
                         <Menu.Item key="3">editor</Menu.Item>
                     </Menu>
                 </Header>
                 <Content style={{ padding: '0 50px' }}>
                     <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-                        <Tabs defaultActiveKey="2" size="small">
+                        <Tabs defaultActiveKey="1" size="small">
                             <TabPane tab="登录" key="1">
                                 <LoginTab />
                             </TabPane>
