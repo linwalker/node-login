@@ -10740,7 +10740,7 @@ var App = function (_React$Component) {
                         ),
                         __WEBPACK_IMPORTED_MODULE_13_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_antd_lib_menu___default.a.Item,
-                            { key: '3' },
+                            { key: '/editor' },
                             'editor'
                         )
                     )

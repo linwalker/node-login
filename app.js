@@ -53,9 +53,15 @@ main.get('/', async (ctx) => {
     })
 })
 
+let editor = new Router();
+editor.get('/', async (ctx) => {
+    ctx.body = '暂未增加'
+})
+
 let router = new Router();
 router.use('/index',index.routes(),index.allowedMethods());
 router.use('/main',main.routes(),main.allowedMethods());
+router.use('/editor',editor.routes(),editor.allowedMethods());
 app.use(router.routes())
 
 app.listen(3003);

@@ -23,7 +23,7 @@ class App extends React.Component {
                     >
                         <Menu.Item key="/index">login</Menu.Item>
                         <Menu.Item key="/main">article</Menu.Item>
-                        <Menu.Item key="3">editor</Menu.Item>
+                        <Menu.Item key="/editor">editor</Menu.Item>
                     </Menu>
                 </Header>
                 <Content style={{ padding: '0 50px' }}>
