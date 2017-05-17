@@ -11,6 +11,7 @@ module.exports = {
 
     entry: {
         'index' : './pages/index/index.js',
+        'main' : './pages/main/index.js',
         vendor: ['react', 'react-dom', 'whatwg-fetch'],
     },
     output: {

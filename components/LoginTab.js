@@ -23,6 +23,9 @@ class LoginTab extends React.Component {
             }).then(res => {
                 res.json().then(res => {
                     Message.info(res.message);
+                    if (res.success) {
+                        location.href = '/main';
+                    }
                 })
             })
         }
@@ -70,7 +73,6 @@ class LoginTab extends React.Component {
                         <Button type="primary" htmlType="submit" style={{width: '100%'}} >
                             Log in
                         </Button>
-                        Or <a href="">register now!</a>
                     </FormItem>
                 </Form>
             </div>
