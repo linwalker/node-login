@@ -14,7 +14,17 @@ class LoginTab extends React.Component {
         // let values = this.props.form.validateFields();
         if (values) {
             console.log(values);
-
+            fetch('/index/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(values)
+            }).then(res => {
+                res.json().then(res => {
+                    console.log(res.success)
+                })
+            })
         }
     }
     getFormValues() {
@@ -36,7 +46,7 @@ class LoginTab extends React.Component {
             <div style={{ width: "280px", margin: "0 auto" }}>
                 <Form onSubmit={this.handleSubmit}>
                     <FormItem>
-                        {getFieldDecorator('userName', {
+                        {getFieldDecorator('username', {
                             rules: [{ required: true, message: '请您输入账号名称！' }],
                         })(
                             <Input addonBefore={<Icon type="user" />} placeholder="请您输入用户名称！" />

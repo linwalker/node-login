@@ -17,6 +17,7 @@ module.exports = {
             ctx.body = result;
         } else {
             let user = await User.findOne({username});
+            //检查用户名是否已存在
             if(!user) {
                 var newUser = new User({
                     username: username,
@@ -30,9 +31,41 @@ module.exports = {
                 } else {
                     ctx.body = result;
                 }
+                // 下面会代码执行时，会直接先跳过save的回掉处理，路由返回404，再执行err回掉，原因暂不清楚
+                // await newUser.save(err => {
+                //     if (err) {
+                //         ctx.body = result;
+                //     } else {
+                //         ctx.body = {success: true, message: '注册成功'}
+                //     }
+                // })
             } else {
                 ctx.body = { success: false, message: 'username already registered'};
             }
         }
+    },
+
+    async signIn (ctx) {
+        let result = {
+            success: false,
+            message: '用户不存在'
+        };
+        const { username,  password } = ctx.request.body;
+        await User.findOne({
+            username
+        }, (err, user) => {
+            if (err) {
+                throw err;
+            }
+            if (!user) {
+                ctx.body = result;
+            } else {
+                if (password === user.password) {
+                    ctx.body = {success: true, message: '登入成功'}
+                } else {
+                    ctx.body = {success: false, message: '密码错误'}
+                }
+            }
+        })
     }
 }

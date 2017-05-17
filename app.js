@@ -43,6 +43,7 @@ index.get('/', async (ctx) => {
 })
 
 index.post('/signup', userInfoController.signUp);
+index.post('/signin', userInfoController.signIn);
 
 let main = new Router();
 main.get('/', async (ctx) => {
