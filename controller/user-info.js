@@ -50,7 +50,9 @@ module.exports = {
             success: false,
             message: '用户不存在'
         };
+        //从请求体中获得参数
         const { username,  password } = ctx.request.body;
+        //检查数据库中是否存在该用户名
         await User.findOne({
             username
         }, (err, user) => {
@@ -60,6 +62,7 @@ module.exports = {
             if (!user) {
                 ctx.body = result;
             } else {
+                //判断密码是否正确
                 if (password === user.password) {
                     ctx.body = {success: true, message: '登入成功'}
                 } else {
