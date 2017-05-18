@@ -88,7 +88,7 @@ console.log('The server is on prot 3003')
 ```js
 module.exports = {
     'secrect': 'linwalkernodelogindemo', //暂未用到，用于后期token验证
-    'database': 'mongodb://localhost:27017/node-login'//填写本地自己 mongodb 连接地址
+    'database': 'mongodb://localhost:27017/node-login'//填写本地 mongodb 连接地址
 };
 ```
 主要设置连接mongodb数据的连接地址
@@ -117,10 +117,11 @@ const UserSchema = new Schema({
 
 module.exports = mongoose.model('User', UserSchema);
 ```
+用户模型主要三个数据，用户名，密码和邮箱。
 
 ### 路由
 
-路由总入口`/routes/index.js`引入所有路由
+路由总入口`/routes/index.js`引入所有路由，使用koa-router中间件
 
 ```js
 const router = require('koa-router')();
@@ -154,7 +155,7 @@ module.exports = routers;
 
 ```
 
-`home.js`的`get`请求返回`home`页面，两个post请求，分别是注册和登入处理。我们来看下登入请求处理。
+`home.js`的`get`请求返回`home`页面，两个post请求，分别是注册和登入处理。我们来看下登入请求处理`user-info.js`。
 
 ```js
 const User = require('./../models/user');
@@ -200,8 +201,14 @@ module.exports = {
 
 ![登入.gif](http://upload-images.jianshu.io/upload_images/4361182-dd5d9ba27c466687.gif?imageMogr2/auto-orient/strip)
 
+### 总结
+
+- 使用了koa框架，主要是路由和ctx上下文的处理，没用过的同学可以点击[koa2教程](https://chenshenhai.github.io/koa2-note/note/start/quick.html)去看看，这是koa的一个入门教程写的很不错；
+- 使用了mongoose操作数据库，栗子中涉及的不难，只是一个User模型，一个save保存数据和一个findOne查找，看下[文档](http://www.nodeclass.com/api/mongoose.html#guide)就明白，或则看下[这篇文章](https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/)
+- 使用[antd-design](https://ant.design/components/menu-cn/) 组件 
+
 ### 备注
 
 这个例子主要参考了：
 [项目1](https://github.com/Nicksapp/nAuth-restful-api)
-[项目2](https://chenshenhai.github.io/koa2-note/note/start/quick.html)
+[项目2](https://github.com/ChenShenhai/koa2-note/blob/master/demo/project/)
