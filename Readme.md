@@ -194,7 +194,58 @@ module.exports = {
 }
 ```
 
-登入请求处理过程为先检查用户名是否存在，在判断密码是否正确。
+登入请求处理过程为先检查用户名是否存在，在判断密码是否正确。在来看下页面发起请求的地方
+
+### 登入请求
+
+```js
+class LoginTab extends React.Component {
+    handleSubmit = async(e) => {
+        e.preventDefault();
+        let values = await this.getFormValues();
+        if (values) {
+            fetch('/home/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(values)
+            }).then(res => {
+                res.json().then(res => {
+                    Message.info(res.message);
+                    if (res.success) {
+                        location.href = '/main';
+                    }
+                })
+            })
+        }
+    }
+    getFormValues() {
+        let self = this;
+        return new Promise((resolve, reject) => {
+            self.props.form.validateFields((err, values) => {
+                if (!err) {
+                    resolve( values );
+                } else {
+                    reject( false );
+                }
+            })
+        })
+    }
+    render() {
+        const { getFieldDecorator } = this.props.form;
+        return (
+            <div style={{ width: "280px", margin: "0 auto" }}>
+                <Form onSubmit={this.handleSubmit}>
+                              ...      
+                </Form>
+            </div>
+        )
+    }
+}
+export default Form.create()(LoginTab);
+```
+表单提交按钮绑定handleSubmit事件，该事件先获取表单提交数据，再发起`/home/signin`的post请求，根据请求结果的success值，来决定是否跳转到成功页面。这里用到antd-design表单组件的相应属性。
 
 ### 操作演示
 演示用户名不存在，密码错误及成功登入。
