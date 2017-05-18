@@ -4,7 +4,6 @@
 const Koa = require('koa');
 const views = require('koa-views')
 const path = require('path')
-const Router =require('koa-router');
 const convert = require('koa-convert');
 const koaStatic = require('koa-static');
 const koaLogger = require('koa-logger');
