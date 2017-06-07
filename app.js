@@ -30,7 +30,7 @@ app.use(convert(koaStatic(
 )))
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.database);
+// mongoose.connect(config.database);
 
 // 初始化路由中间件
 app.use(routers.routes()).use(routers.allowedMethods())
