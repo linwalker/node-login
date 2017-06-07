@@ -13989,6 +13989,11 @@ var LoginTab = function (_React$Component) {
                             'Log in'
                         )
                     )
+                ),
+                __WEBPACK_IMPORTED_MODULE_21_react___default.a.createElement(
+                    'a',
+                    { href: '/github/login' },
+                    __WEBPACK_IMPORTED_MODULE_21_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_antd_lib_icon___default.a, { type: 'github', style: { fontSize: 20, color: '#000' } })
                 )
             );
         }

@@ -74,6 +74,9 @@ class LoginTab extends React.Component {
                         </Button>
                     </FormItem>
                 </Form>
+                <a href="/github/login">
+                    <Icon type="github" style={{fontSize: 20, color: '#000'}}/>
+                </a>
             </div>
         )
     }
