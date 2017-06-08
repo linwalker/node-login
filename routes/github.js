@@ -58,12 +58,14 @@ const routers = router
                 })
                 .then(res => {
                     console.log(res);
-                    ctx.body = 'success';
+                    ctx.body = res;
                 })
         })
         .catch(e => {
             console.log(e);
         })
     })
+
+
 
 module.exports = routers;
