@@ -4,6 +4,9 @@
 
 **项目源码地址**：<https://github.com/linwalker/node-login>
 
+另外例子中后期添加的github第三方验证登入，说明介绍写在另一个地方：
+
+[第三方登入例子-GitHub授权登入](http://www.jianshu.com/p/a9c0b277a3b3)
 	
 ## 技术栈
 
